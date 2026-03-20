@@ -12,7 +12,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         User::factory()->count(1)->create()->each(function ($user) {
-            WeightLog::factory()->count(5)->create([
+            WeightLog::factory()->count(35)->create([
                 'user_id' => $user->id,
             ]);
 
